@@ -1,0 +1,49 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.8, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\gokul\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\gokul\OneDrive\Desktop\Cyberhack\EvidenTrace
+plugins: anyio-4.15.1
+collecting ... collected 39 items
+
+tests/test_detection.py::test_repeated_failures_generate_alert PASSED    [  2%]
+tests/test_detection.py::test_single_failure_does_not_generate_repeated_failure_alert PASSED [  5%]
+tests/test_detection.py::test_successful_login_after_lab_hours_is_detected PASSED [  7%]
+tests/test_detection.py::test_success_inside_lab_hours_is_not_after_hours PASSED [ 10%]
+tests/test_detection.py::test_ip_outside_approved_network_is_detected PASSED [ 12%]
+tests/test_detection.py::test_ip_inside_approved_network_is_not_flagged PASSED [ 15%]
+tests/test_detection.py::test_alert_contains_evidence_event_ids PASSED   [ 17%]
+tests/test_detection.py::test_detection_is_independent_of_department PASSED [ 20%]
+tests/test_edge_cases.py::test_01_empty_csv PASSED                       [ 23%]
+tests/test_edge_cases.py::test_02_missing_required_columns PASSED        [ 25%]
+tests/test_edge_cases.py::test_03_missing_account PASSED                 [ 28%]
+tests/test_edge_cases.py::test_04_missing_timestamp PASSED               [ 30%]
+tests/test_edge_cases.py::test_05_invalid_timestamp PASSED               [ 33%]
+tests/test_edge_cases.py::test_06_unknown_login_outcome PASSED           [ 35%]
+tests/test_edge_cases.py::test_07_unsorted_rows PASSED                   [ 38%]
+tests/test_edge_cases.py::test_08_duplicate_event_ids PASSED             [ 41%]
+tests/test_edge_cases.py::test_09_failures_below_threshold PASSED        [ 43%]
+tests/test_edge_cases.py::test_10_failures_exactly_at_threshold PASSED   [ 46%]
+tests/test_edge_cases.py::test_11_success_without_failures PASSED        [ 48%]
+tests/test_edge_cases.py::test_12_failures_without_success PASSED        [ 51%]
+tests/test_edge_cases.py::test_13_success_outside_window PASSED          [ 53%]
+tests/test_edge_cases.py::test_14_success_at_window_boundary PASSED      [ 56%]
+tests/test_edge_cases.py::test_15_sequence_crossing_midnight PASSED      [ 58%]
+tests/test_edge_cases.py::test_16_new_sequence_after_success PASSED      [ 61%]
+tests/test_edge_cases.py::test_17_login_at_opening_time PASSED           [ 64%]
+tests/test_edge_cases.py::test_18_login_at_closing_time PASSED           [ 66%]
+tests/test_edge_cases.py::test_19_weekend_and_holiday PASSED             [ 69%]
+tests/test_edge_cases.py::test_20_overnight_schedule PASSED              [ 71%]
+tests/test_edge_cases.py::test_21_ip_network_boundaries PASSED           [ 74%]
+tests/test_edge_cases.py::test_22_ip_outside_approved_network PASSED     [ 76%]
+tests/test_edge_cases.py::test_23_department_does_not_change_detection PASSED [ 79%]
+tests/test_validation.py::test_valid_row_is_retained PASSED              [ 82%]
+tests/test_validation.py::test_missing_account_is_excluded PASSED        [ 84%]
+tests/test_validation.py::test_missing_timestamp_is_reported PASSED      [ 87%]
+tests/test_validation.py::test_invalid_timestamp_is_reported PASSED      [ 89%]
+tests/test_validation.py::test_unknown_outcome_is_reported PASSED        [ 92%]
+tests/test_validation.py::test_duplicate_event_ids_are_reported PASSED   [ 94%]
+tests/test_validation.py::test_valid_rows_are_sorted_by_timestamp PASSED [ 97%]
+tests/test_validation.py::test_empty_dataframe_has_zero_rows PASSED      [100%]
+
+============================= 39 passed in 1.56s ==============================
+
