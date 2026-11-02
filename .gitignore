@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+venv/
+.venv/
+*.db
+*.sqlite
+*.sqlite3
+review_statuses.json
+.env
+test_results.log
+test_results.txt
